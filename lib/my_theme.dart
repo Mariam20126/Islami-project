@@ -11,11 +11,22 @@ class MyTheme {
       centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,
+      iconTheme: IconThemeData(color: blackColor),
     ),
     textTheme: TextTheme(
       titleLarge: TextStyle(
         fontSize: 30,
         fontWeight: FontWeight.w700,
+        color: blackColor,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w600,
+        color: blackColor,
+      ),
+      titleSmall: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w400,
         color: blackColor,
       ),
     ),
