@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islamy_project/home/quran/sura_details_screen.dart';
 
 class ItemSuraName extends StatelessWidget {
-  String name;
+String name;
   int index;
 
   ItemSuraName({required this.name, required this.index});

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_project/home/home_screen.dart';
 import 'package:islamy_project/home/quran/sura_details_screen.dart';
+import 'package:islamy_project/home/radio/radio_screen.dart';
 import 'package:islamy_project/my_theme.dart';
 
 void main(){
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget{
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
         SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
+        RadioTab.routeName: (context) => RadioTab(),
       },
       theme: MyTheme.lightTheme,
     );
