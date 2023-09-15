@@ -4,6 +4,8 @@ import 'package:islamy_project/home/quran/sura_details_screen.dart';
 import 'package:islamy_project/home/radio/radio_screen.dart';
 import 'package:islamy_project/my_theme.dart';
 
+import 'home/hadeth/hadeth_details_screen.dart';
+
 void main(){
   runApp(MyApp());
 }
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget{
         HomeScreen.routeName: (context) => HomeScreen(),
         SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
         RadioTab.routeName: (context) => RadioTab(),
+        HadethDetailsScreen.routeName: (context) => HadethDetailsScreen(),
       },
       theme: MyTheme.lightTheme,
     );
