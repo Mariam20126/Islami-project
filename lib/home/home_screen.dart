@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamy_project/home/hadeth/hadeth_tab.dart';
 import 'package:islamy_project/home/quran/quran_tab.dart';
 import 'package:islamy_project/home/radio/radio_screen.dart';
@@ -28,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             centerTitle: true,
             title: Text(
-              'Islami',
+              AppLocalizations.of(context)!.app_title,
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
@@ -46,25 +47,25 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: ImageIcon(
                     AssetImage('assets/images/icon_quran.png'),
                   ),
-                  label: 'quran',
+                  label: AppLocalizations.of(context)!.quran,
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/icon_hadeth.png'),
                   ),
-                  label: 'hadeth',
+                  label: AppLocalizations.of(context)!.hadeth,
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/icon_sebha.png'),
                   ),
-                  label: 'tasbeh',
+                  label: AppLocalizations.of(context)!.sebha,
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/icon_radio.png'),
                   ),
-                  label: 'radio',
+                  label: AppLocalizations.of(context)!.radio,
                 ),
               ],
             ),
