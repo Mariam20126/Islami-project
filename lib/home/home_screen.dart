@@ -4,6 +4,9 @@ import 'package:islamy_project/home/hadeth/hadeth_tab.dart';
 import 'package:islamy_project/home/quran/quran_tab.dart';
 import 'package:islamy_project/home/radio/radio_screen.dart';
 import 'package:islamy_project/home/tasbeh/tasbeh_tab.dart';
+import 'package:islamy_project/providers/app_config_provider.dart';
+import 'package:islamy_project/settings/settings_tab.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home_screen';
@@ -17,14 +20,22 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
     return Stack(
       children: [
-        Image.asset(
-          'assets/images/main_background.png',
-          width: double.infinity,
-          height: double.infinity,
-          fit: BoxFit.fill,
-        ),
+        provider.isDarkMood()
+            ? Image.asset(
+                'assets/images/bg.png',
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.fill,
+              )
+            : Image.asset(
+                'assets/images/main_background.png',
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.fill,
+              ),
         Scaffold(
           appBar: AppBar(
             centerTitle: true,
@@ -67,6 +78,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   label: AppLocalizations.of(context)!.radio,
                 ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.settings),
+                  label: AppLocalizations.of(context)!.settings,
+                ),
               ],
             ),
           ),
@@ -76,5 +91,11 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  List<Widget> tabs = [QuranTab(), HadethTab(), TasbehTab(), RadioTab()];
+  List<Widget> tabs = [
+    QuranTab(),
+    HadethTab(),
+    TasbehTab(),
+    RadioTab(),
+    SettingsTab()
+  ];
 }
