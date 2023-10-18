@@ -5,6 +5,7 @@ import 'package:islamy_project/home/quran/sura_details_screen.dart';
 import 'package:islamy_project/home/radio/radio_screen.dart';
 import 'package:islamy_project/my_theme.dart';
 import 'package:islamy_project/providers/app_config_provider.dart';
+import 'package:islamy_project/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'home/hadeth/hadeth_details_screen.dart';
@@ -20,8 +21,9 @@ class MyApp extends StatelessWidget {
     var provider = Provider.of<AppConfigProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: HomeScreen.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: {
+        SplashScreen.routeName: (context) => SplashScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
         SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
         RadioTab.routeName: (context) => RadioTab(),
